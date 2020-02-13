@@ -1,0 +1,23 @@
+{
+  "name": "art-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleksarad/art-portfolio.git"
+  },
+  "author": "alexandra r",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleksarad/art-portfolio/issues"
+  },
+  "homepage": "https://github.com/aleksarad/art-portfolio#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
