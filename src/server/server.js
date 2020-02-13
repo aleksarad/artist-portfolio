@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 //Initializing main project folder
-app.use(express.static('src/client'));
+app.use(express.static('dist'));
 
 //Server setup
 app.listen(3000, () => { 
@@ -11,7 +11,7 @@ app.listen(3000, () => {
 
 //ROUTES
 app.get('/', function (req, res) {
-    res.sendFile('/client/views/index.html', { root: __dirname + '/..' })
+    res.sendFile('dist/index.html')
 })
 
 app.get('/about', function (req, res) {
