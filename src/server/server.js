@@ -15,5 +15,5 @@ app.get('/', function (req, res) {
 })
 
 app.get('/about', function (req, res) {
-    res.sendFile('/client/views/html/about.html', { root: __dirname + '/..' })
+  res.sendFile('/dist/about.html', { root: __dirname + '/../..' })
 })

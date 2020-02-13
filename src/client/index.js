@@ -1,3 +1,7 @@
+require('normalize.css/normalize.css');
+import('./styles/styles.css');
+import('./media/IMG_0704.JPG');
+
 // $(function() {
 //     $('.enlarge').on('click', function() {
 //         $('.imagepreview').attr('src', $(this).find('img').attr('src'));
