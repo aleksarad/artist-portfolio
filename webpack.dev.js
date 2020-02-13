@@ -4,7 +4,9 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: './src/client/app.js',
+    entry: {
+        index: './src/client/app.js'
+      },
     mode: 'development',
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
@@ -29,11 +31,12 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebPackPlugin({
-            template: "./src/client/views/index.html",
-            filename: "./index.html",
-            
-        }),
-        new CleanWebpackPlugin(),
-    ]
+        new HtmlWebpackPlugin({
+          template: './src/client/views/index.html',
+          inject: true,
+          chunks: ['index'],
+          filename: 'index.html'
+        })
+      ]
 }
+    
