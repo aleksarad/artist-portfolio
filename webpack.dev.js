@@ -1,7 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const path=require('path');
 
 module.exports = {
-
 
   entry: {
     index: './src/client/index.js'
@@ -13,6 +14,7 @@ module.exports = {
   },
 
   module: {
+  
     rules: [
       {
         test: /\.js$/i,
@@ -27,27 +29,21 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader'
-          // Please note we are not running postcss here
         ]
       },
-      {
-        // Load all images as base64 encoding if they are smaller than 8192 bytes
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        use: [
-          {
+    {
+        test: /\.(png|jpg|svg|gif)$/,  
+        use: [{
             loader: 'url-loader',
-            options: {
-              // On development we want to see where the file is coming from, hence we preserve the [path]
-              name: '[path][name].[ext]?hash=[hash:20]',
-              esModule: false,
-              limit: 8192
-            }
-          }
-        ]
-      }
+            options: { 
+                limit: 8000, // Convert images < 8kb to base64 strings
+                name: '[name].[ext]'
+            } 
+        }]
+    }
     ]
   },
-  
+
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/client/views/index.html',
