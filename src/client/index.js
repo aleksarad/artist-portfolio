@@ -1,6 +1,14 @@
-require('normalize.css/normalize.css');
+// require('normalize.css/normalize.css');
+require('lightbox2/dist/css/lightbox.min.css');
+
+
+
+window.lightbox = require('lightbox2');
+// window.$ = require('jquery');
+// import ('bootstrap');
+// import('bootstrap/dist/css/bootstrap.min.css');
 import('./styles/styles.css');
-// import('../../node_modules/lightbox2/dist/css/lightbox.min.css');
+
 
 //Full size
 import('./media/IMG_0687.jpg');
@@ -29,6 +37,9 @@ import('./media/thumbnails/thumb_IMG_0647.jpg');
 import('./media/thumbnails/thumb_IMG_0872.jpg');
 import('./media/thumbnails/thumb_IMG_0870.jpg');
 import('./media/thumbnails/thumb_IMG_0863.jpg');
+
+//ABOUT ICON
+import('./media/thumbnails/IMG_0671.jpg')
 
 
 // $(function() {

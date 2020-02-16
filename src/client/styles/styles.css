@@ -78,7 +78,8 @@ body {
 }
 
 #bio-icon {
-    width: 300px;
-    border-radius: 50px;
+    width: 250px;
+    margin: 20px;
+    border-radius: 30%;
     float:right;
 }
