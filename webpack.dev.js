@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 const path=require('path');
 
@@ -24,13 +25,12 @@ module.exports = {
           presets: ['@babel/preset-env']
         }
       },
+
       {
         test: /\.css$/i,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
+        use: [ MiniCssExtractPlugin.loader, 'css-loader' ],
       },
+      
     {
         test: /\.(png|jpg|svg|gif)$/,  
         use: [{
@@ -56,6 +56,7 @@ module.exports = {
         inject: true,
         chunks: ['index'],
         filename: 'about.html'
-    })
+    }),
+    new MiniCssExtractPlugin()
   ]
 }
