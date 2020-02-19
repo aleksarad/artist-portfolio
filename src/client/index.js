@@ -1,4 +1,3 @@
-// require('normalize.css/normalize.css');
 require('lightbox2/dist/css/lightbox.min.css');
 window.lightbox = require('lightbox2');
 import('./styles/styles.scss');
