@@ -4,9 +4,15 @@ const app = express();
 //Initializing main project folder
 app.use(express.static('dist'));
 
+
+
+
 //Server setup
-app.listen(3000, () => { 
-  console.log('Server running on http://localhost:3000/'); 
+
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => { 
+  console.log('Server running'); 
 });
 
 //ROUTES
