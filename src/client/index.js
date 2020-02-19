@@ -1,13 +1,7 @@
 // require('normalize.css/normalize.css');
 require('lightbox2/dist/css/lightbox.min.css');
-
-
-
 window.lightbox = require('lightbox2');
-// window.$ = require('jquery');
-// import ('bootstrap');
-// import('bootstrap/dist/css/bootstrap.min.css');
-import('./styles/styles.css');
+import('./styles/styles.scss');
 
 
 //Full size
@@ -38,30 +32,16 @@ import('./media/thumbnails/thumb_IMG_0872.jpg');
 import('./media/thumbnails/thumb_IMG_0870.jpg');
 import('./media/thumbnails/thumb_IMG_0863.jpg');
 
-//ABOUT ICON
-import('./media/thumbnails/IMG_0671.jpg')
+// ABOUT ICON
+import('./media/thumbnails/IMG_0890.jpg')
 
 
-// $(function() {
-//     $('.enlarge').on('click', function() {
-//         $('.imagepreview').attr('src', $(this).find('img').attr('src'));
-//         $('#imagemodal').modal('show');   
-//     });		
-// });
+// Prevent right clicks + dragging
 
-// $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-//     event.preventDefault();
-//     $(this).ekkoLightbox({
-//         showArrows: false
-//     });
-// });
+$("body").on("contextmenu",function(e){
+    return false;
+});
 
-/**Prevent right clicks + dragging */
-
-// $("body").on("contextmenu",function(e){
-//     return false;
-// });
-
-// $("img").mousedown(function(e){
-//     e.preventDefault()
-// });
+$("img").mousedown(function(e){
+    e.preventDefault()
+});

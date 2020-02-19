@@ -27,10 +27,16 @@ module.exports = {
       },
 
       {
-        test: /\.css$/i,
-        use: [ MiniCssExtractPlugin.loader, 'css-loader' ],
+        test: /\.scss$/i,
+        use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' ],
       },
-      
+
+      //this is for lightbox - another option is to convert the lightbox CSS file to SCSS
+      {
+        test: /\.css$/i,
+        use: [ MiniCssExtractPlugin.loader, 'css-loader'],
+      },
+
     {
         test: /\.(png|jpg|svg|gif)$/,  
         use: [{
